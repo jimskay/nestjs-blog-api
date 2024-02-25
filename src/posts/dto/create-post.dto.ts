@@ -1,4 +1,4 @@
-import { IsInt, IsNotEmpty, IsNumber, IsString, MaxLength, Min } from "class-validator";
+import { IsArray, IsInt, IsNotEmpty, IsNumber, IsString, MaxLength, Min } from "class-validator";
 
 export class CreatePostDto {
 
@@ -6,11 +6,6 @@ export class CreatePostDto {
     @IsString()
     @IsNotEmpty()
     titulo: string;
-
-    @Min(0)
-    @IsNumber()
-    @IsNotEmpty()
-    price: number;
 
     @Min(1)
     @IsInt()
